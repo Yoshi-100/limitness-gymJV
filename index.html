@@ -1,3 +1,4 @@
+<!-- HTML内にスクリプトを追加する場合（例: CDNs経由のReact） -->
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -9,9 +10,28 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- React, ReactDOM のCDN (開発環境用) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   </head>
   <body>
     <div id="root"></div>
+    <!-- ここでReactコードを書き込む -->
+    <script>
+      const App = () => {
+        return React.createElement(
+          "div",
+          { className: "container" },
+          React.createElement("h1", null, "リミットネス Gymへようこそ")
+        );
+      };
+
+      // React 18の場合の描画コード
+      const rootElement = document.getElementById("root");
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(React.createElement(App));
+    </script>
+
     <!-- Bootstrap JS Bundle (Popper含む) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
