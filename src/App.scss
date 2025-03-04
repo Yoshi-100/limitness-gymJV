@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/bootstrap";
+
+// グローバル設定
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+  color: #333;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// ヘッダー・ロゴなど
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  p {
+    margin: 0.2rem 0 0;
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+}
+
+// メインコンテンツ
+main {
+  flex: 1 0 auto;
+  padding: 2rem;
+}
+
+// フッター
+footer {
+  background-color: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+}
+
+// 予約フォームのスタイルなど、ページ固有のスタイルは各ページコンポーネント内または局所スタイルで記述
